@@ -25,9 +25,3 @@ let vm = Vue.createApp({
         }
     }
 }).mount('#app');
-// birds: ['Pigeons', 'Eagles', 'Doves', 'Parrots'],
-// people: [
-//     { name: 'John', age: 20},
-//     { name: 'Rick', age: 18},
-//     { name: 'Amy', age: 33}
-// ]

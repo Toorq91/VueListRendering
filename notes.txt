@@ -1,0 +1,19 @@
+Hva er :key i Vue?
+v-for og :key: Når du bruker v-for til å gjenta elementer i en liste, bruker du :key for å gi hver element en unik identikator.
+Dette hjelper Vue med å spore hvilke elementer som er lagt til, fjernet eller omorganisert når listen oppdateres.
+
+Hvorfor bruke :key?: Uten :key kan Vue gjøre unødvendige oppdatering på DOM-en, noe som kan redusere ytelsen.
+:key gjør oppdateringene mer effektive.
+
+Eksempel:
+<div v-for="person in people" :key="person.name">
+    <h3>{{ person.name }}</h3>
+    <p>{{ person.message }}</p>
+</div>
+
+Her bruker jeg :key="person.name" for å sikre at hver kort har en unik identikator basert på personens navn.
+
+Når elementene i listen endres, kan Vue raskt finne hvilke som er endret uten å måtte oppdatere hele listen.
+
+Kort oppsummering:
+:key forbedrer ytelsen ved å gi hvert element en unik identikator som Vue kan bruke for å spore endringer i listen.
